@@ -1,37 +1,17 @@
-# Evaluation
+# Evaluation Framework & Business Metrics
 
-## Primary Business Metric
+## Measured Financial Metrics (Batch Analysis)
+RecoveryOS evaluates performance across a batch of 1,500 synthetic payment failure records generated with realistic Razorpay ground-truth characteristics.
 
-Total Revenue Recovered
+- **Total Revenue at Risk:** Sum of amounts across all failed payments in the batch.
+- **Total Revenue Recovered:** Sum of amounts successfully recovered via policy-approved interventions.
+- **Batch Recovery Rate (%):** `(Total Revenue Recovered / Total Revenue at Risk) * 100`
+- **Escalation & Stop Efficiency:** Percentage of cases safely halted or escalated to prevent unnecessary gateway friction and fee waste.
 
-Revenue Recovered = Sum of successfully recovered payment amounts.
-
-## Recovery Rate
-
-Recovery Rate = Revenue Recovered / Revenue at Risk × 100
-
-## AI/ML Metrics
-
-- Precision
-- Recall
-- F1 Score
-- False-positive rate
-
-## Operational Metrics
-
-- Total payments processed
-- Eligible payments
-- Automated actions
-- Escalations
-- Stopped cases
-- Average attempts per payment
-
-## Evaluation Dataset
-
-The synthetic dataset will be divided into training, validation, and held-out test data.
-
-The held-out test set will be used for final model evaluation.
-
-## Key Principle
-
-The system must distinguish between predicted recovery potential and actual recovered revenue.
+## ML Performance Metrics
+The ML risk model (`RandomForestClassifier`) is evaluated on an 80/20 train-test split using the following metrics:
+- **ROC-AUC Score:** Evaluates probability ranking quality.
+- **Precision:** Measures accuracy of positive recovery predictions.
+- **Recall:** Measures coverage of actual recoverable payments.
+- **F1-Score:** Harmonic mean of precision and recall.
+- **Confusion Matrix:** Measures false-positive and false-negative tradeoffs.
