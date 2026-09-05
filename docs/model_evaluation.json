@@ -1,0 +1,33 @@
+{
+  "total_samples": 1359,
+  "test_samples": 272,
+  "precision": 0.655,
+  "recall": 0.7467,
+  "f1_score": 0.6978,
+  "roc_auc": 0.6786,
+  "confusion_matrix": [
+    [
+      63,
+      59
+    ],
+    [
+      38,
+      112
+    ]
+  ],
+  "feature_names": [
+    "amount",
+    "attempt_number",
+    "previous_success_rate",
+    "time_since_failure_minutes",
+    "is_subscription",
+    "payment_method_netbanking",
+    "payment_method_upi",
+    "payment_method_wallet",
+    "failure_reason_bank_declined",
+    "failure_reason_insufficient_funds",
+    "failure_reason_limit_exceeded",
+    "failure_reason_temporary_network_error",
+    "failure_reason_timeout"
+  ]
+}
