@@ -1,0 +1,31 @@
+# RecoveryOS
+
+AI-powered revenue recovery agent for Razorpay merchants.
+
+## Problem
+
+Merchants lose revenue through failed payments, checkout abandonment,
+subscription failures and overdue receivables.
+
+RecoveryOS detects revenue at risk, determines an appropriate recovery
+intervention, executes bounded recovery workflows, verifies the outcome,
+and records an auditable trail.
+
+## Core Flow
+
+Detect → Diagnose → Decide → Guardrail → Act → Verify → Audit
+
+## Technology
+
+- Python
+- Razorpay Test APIs
+- Supabase / PostgreSQL
+- Ollama
+- Trigger.dev
+- n8n
+- Next.js / Vercel
+- GitHub
+
+## Status
+
+🚧 Initial architecture phase
